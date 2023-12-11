@@ -34,18 +34,11 @@ Asegúrate de tener instalado Node.js y npm en tu máquina antes de comenzar.
 1. Crea un archivo `.env` en el directorio raíz del proyecto para configurar las variables de entorno:
 2. `VUE_APP_API_BOOKS_URL` será el host de la API
 
-    ```dotenv
+    ```env
     VUE_APP_API_BOOKS_URL=http://localhost:3000
     ```
 
     Asegúrate de ajustar `VUE_APP_API_BOOKS_URL` según la URL de tu API de backend.
-
-2. Abre el archivo `src/config.js` para utilizar la variable de entorno en la configuración de la API:
-
-    ```javascript
-    // src/config.js
-    export const API_URL = process.env.VUE_APP_API_BOOKS_URL + '/api/libros';
-    ```
 
 ## Ejecución
 
@@ -65,7 +58,7 @@ La aplicación utiliza las siguientes características:
 - **Agregar Libro:** Añade un nuevo libro a la lista.
 - **Editar Libro:** Modifica la información de un libro existente.
 - **Eliminar Libro:** Elimina un libro de la lista.
-- Busca Libro: Busca un libro por Titulo o Autor
+- **Busca Libro**: Busca un libro por Titulo o Autor
 
 La interfaz de usuario proporciona una experiencia agradable, y los mensajes de error son manejados de manera efectiva.
 
@@ -75,17 +68,21 @@ La interfaz de usuario proporciona una experiencia agradable, y los mensajes de 
 |-- src 
 | |-- assets | 
 |-- components | 
-|-- views | 
+|-- data | 
 |-- store (Vuex) | 
 |-- router (Vue Router) | 
+|-- views | 
+| |-- Pages | 
 |-- App.vue | 
 |-- main.js 
 |-- public 
 |-- README.md 
 |-- package.json 
-|-- .env`
+|-- .env
+
 ```
 
+<img src="https://i.postimg.cc/V5Q87d2g/crud.png" alt="Imagen CRUD" width="900" heigth="auto">
 
 - **src:** Contiene el código fuente de la aplicación.
 - **store:** Contiene los módulos Vuex para la gestión del estado.
