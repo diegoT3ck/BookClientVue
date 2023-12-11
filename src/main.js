@@ -4,6 +4,10 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
+// Toasify
+import Vue3Toastify from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
+
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -22,4 +26,12 @@ const vuetify = createVuetify({
   directives,
 })
 
-createApp(App).use(store).use(router).use(vuetify).mount('#app')
+createApp(App)
+.use(store)
+.use(router)
+.use(Vue3Toastify, {
+  // Opciones de configuración para Vue3Toastify
+  autoClose: 3000,
+  // ...
+}).use(vuetify)
+.mount('#app')

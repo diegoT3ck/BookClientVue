@@ -1,16 +1,31 @@
 <template>
   <v-app>
+
     <v-toolbar  color="brown-darken-1"       
       app
       extended
       flat
     > 
-    <div class="d-flex justify-center align-center mt-5 ms-3">
-      <v-img :src="require('@/assets/images/book.png')" width="50"></v-img>
-      <h2 class="ml-4 text-uppercase text">Book Store</h2>
-    </div>
+    <v-btn size="x-large" to="/" variant="plain">
+        <template v-slot:prepend>
+          <v-img :src="require('@/assets/images/book.png')" width="50">
+          </v-img>
+        </template>
+        <span class="text-bold">
+          Book Store
+        </span>
+    </v-btn>
+    <v-spacer></v-spacer>
+    <v-btn size="x-large" to="/perfil" variant="plain">
+      Perfil
+      <template v-slot:append>
+        <v-icon size="x-large">mdi-account</v-icon>
+      </template>
+    </v-btn>
     </v-toolbar>
   <main>
+    <!--  -->
+    
     <v-card
     class="mx-auto"
     max-width="70%"

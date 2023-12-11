@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LibrosView from '../views/Pages/LibrosView.vue'
+import LibrosView from '@/views/Pages/LibrosView.vue'
+import AcountView from '@/views/Pages/AcountView.vue'
 
 const routes = [
   {
@@ -7,6 +8,11 @@ const routes = [
     name: 'home',
     component: LibrosView
   },
+  {
+    path: '/perfil',
+    name: 'perfil',
+    component: AcountView
+  }
   
 
 
